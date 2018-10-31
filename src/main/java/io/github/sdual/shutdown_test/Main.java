@@ -15,10 +15,14 @@ public class Main {
       System.out.println("interrupted.");
     }
 
+    System.out.println("end.");
   }
 
   public static void start() throws InterruptedException {
-    Thread.sleep(100000);
+    while (true) {
+      Thread.sleep(5000);
+      Thread.currentThread().interrupt();
+    }
   }
 
 }
